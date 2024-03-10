@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: import.meta.env.PROD
-    ? "https://car-learn.vercel.app/"
+    ? import.meta.env.DB_URI
     : `http://localhost:${import.meta.env.VITE_PORT}`,
 });
 

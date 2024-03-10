@@ -16,6 +16,7 @@ export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (userData: IRegisterInfo, thunkAPI) => {
     try {
+      console.log(import.meta.env.MODE, import.meta.env.DB_URI);
       const response = await axiosInstance.post(`/users/register`, userData);
       return response.data;
     } catch (err: any) {
