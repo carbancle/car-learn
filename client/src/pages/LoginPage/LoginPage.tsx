@@ -2,6 +2,9 @@ import { useForm } from "react-hook-form"
 import { useAppDispatch } from "../../store"
 import { ILoginInfo, loginUser } from "../../store/thunkFunction";
 
+console.log("기본 주소?", import.meta.env.BASE_URL)
+console.log("env DB 설정 값?", import.meta.env.DB_URI)
+
 function LoginPage() {
   const {
     register,

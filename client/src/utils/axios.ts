@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
   baseURL: import.meta.env.PROD
-    ? import.meta.env.DB_URI
+    ? import.meta.env.BASE_URL
     : `http://localhost:${import.meta.env.VITE_PORT}`,
 });
 
